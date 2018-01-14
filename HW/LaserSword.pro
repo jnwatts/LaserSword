@@ -1,4 +1,4 @@
-update=Thu 11 Jan 2018 11:25:07 AM EST
+update=Sat 13 Jan 2018 08:34:12 PM EST
 version=1
 last_client=kicad
 [pcbnew]
@@ -27,7 +27,7 @@ NetIExt=net
 version=1
 [eeschema]
 version=1
-LibDir=footprints
+LibDir=footprints;footprints/dfn-10-3x3mm_pitch0.pretty
 [eeschema/libraries]
 LibName1=power
 LibName2=device
