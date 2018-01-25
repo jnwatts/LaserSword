@@ -51,10 +51,3 @@ void BOARD_InitDebugConsole(void)
 
     DbgConsole_Init(BOARD_DEBUG_UART_BASEADDR, BOARD_DEBUG_UART_BAUDRATE, BOARD_DEBUG_UART_TYPE, uartClkSrcFreq);
 }
-
-
-int main(int argc, char const *argv[])
-{
-	/* code */
-	return 0;
-}

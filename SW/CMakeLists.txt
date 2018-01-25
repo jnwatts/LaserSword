@@ -177,6 +177,7 @@ include_directories(${ProjDirPath}/sdk/devices/MKE04Z4/utilities/log)
 include_directories(${ProjDirPath}/sdk/platform/drivers)
 
 add_executable(Lasersword.elf 
+"${ProjDirPath}/src/main.c"
 "${ProjDirPath}/src/board.c"
 "${ProjDirPath}/src/board.h"
 "${ProjDirPath}/src/clock_config.c"
