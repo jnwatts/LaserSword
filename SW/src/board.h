@@ -36,6 +36,7 @@
 #define _BOARD_H_
 
 #include "clock_config.h"
+#include "fsl_gpio.h"
 
 /*******************************************************************************
  * Definitions
@@ -60,6 +61,31 @@
 #define BOARD_I2C_BASEADDR I2C0
 
 #define BOARD_SPI_BASEADDR SPI0
+
+// Outputs
+#define BOARD_DBG0_PORT			kGPIO_PORTC
+#define BOARD_DBG0_PIN			(1u<<1)
+#define BOARD_DBG1_PORT			kGPIO_PORTC
+#define BOARD_DBG1_PIN			(1u<<2)
+#define BOARD_L1_UP_PORT		kGPIO_PORTA
+#define BOARD_L1_UP_PIN			(1u<<1)
+#define BOARD_L2_UP_PORT		kGPIO_PORTB
+#define BOARD_L2_UP_PIN			(1u<<0)
+#define BOARD_SPI_CSN_PORT		kGPIO_PORTB
+#define BOARD_SPI_CSN_PIN		(1u<<5)
+
+// Inputs
+#define BOARD_SW1_PORT			kGPIO_PORTB
+#define BOARD_SW1_PIN			(1u<<4)
+#define BOARD_L1_IN_PORT		kGPIO_PORTB
+#define BOARD_L1_IN_PIN			(1u<<6)
+#define BOARD_L2_IN_PORT		kGPIO_PORTB
+#define BOARD_L2_IN_PIN			(1u<<7)
+
+// Interrupts
+#define BOARD_ACCEL_INTN_PORT	kGPIO_PORTC
+#define BOARD_ACCEL_INTN_PIN	(1u<<0)
+
 
 #if defined(__cplusplus)
 extern "C" {
