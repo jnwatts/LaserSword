@@ -1,3 +1,5 @@
+*.sublime-*
+
 ## C++.gitignore
 # Prerequisites
 *.d
