@@ -10,10 +10,10 @@ typedef struct {
 } leds_t;
 leds_t g_leds;
 
-static inline void Leds_SetL1(void) { GPIO_PortSet(BOARD_L1_UP_PORT, BOARD_L1_UP_PIN); }
-static inline void Leds_SetL2(void) { GPIO_PortSet(BOARD_L2_UP_PORT, BOARD_L2_UP_PIN); }
-static inline void Leds_ClearL1(void) { GPIO_PortClear(BOARD_L1_UP_PORT, BOARD_L1_UP_PIN); }
-static inline void Leds_ClearL2(void) { GPIO_PortClear(BOARD_L2_UP_PORT, BOARD_L2_UP_PIN); }
+static inline void Leds_SetL1(void) { GPIO_PinWrite(BOARD_L1_UP_PORT, BOARD_L1_UP_PIN, 1); }
+static inline void Leds_SetL2(void) { GPIO_PinWrite(BOARD_L2_UP_PORT, BOARD_L2_UP_PIN, 1); }
+static inline void Leds_ClearL1(void) { GPIO_PinWrite(BOARD_L1_UP_PORT, BOARD_L1_UP_PIN, 0); }
+static inline void Leds_ClearL2(void) { GPIO_PinWrite(BOARD_L2_UP_PORT, BOARD_L2_UP_PIN, 0); }
 
 void Leds_Init(void)
 {
