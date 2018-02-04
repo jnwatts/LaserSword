@@ -178,6 +178,8 @@ include_directories(${ProjDirPath}/sdk/platform/drivers)
 
 add_executable(Lasersword.elf 
 "${ProjDirPath}/src/main.c"
+"${ProjDirPath}/src/leds.c"
+"${ProjDirPath}/src/leds.h"
 "${ProjDirPath}/src/board.c"
 "${ProjDirPath}/src/board.h"
 "${ProjDirPath}/src/pin_mux.c"
