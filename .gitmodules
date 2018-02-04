@@ -1,0 +1,3 @@
+[submodule "SW/sd_fat"]
+	path = SW/sd_fat
+	url = https://github.com/suan/Freescale-SD-FAT-Library.git
