@@ -62,6 +62,8 @@
 
 #define BOARD_SPI_BASEADDR SPI0
 
+#define BOARD_TIMER_FTM FTM0
+
 // Outputs
 #define BOARD_DBG0_PORT			kGPIO_PORTC
 #define BOARD_DBG0_PIN			1

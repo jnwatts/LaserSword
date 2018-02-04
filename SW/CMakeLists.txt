@@ -188,6 +188,8 @@ add_executable(Lasersword.elf
 "${ProjDirPath}/src/buttons.h"
 "${ProjDirPath}/src/board.c"
 "${ProjDirPath}/src/board.h"
+"${ProjDirPath}/src/timer.c"
+"${ProjDirPath}/src/timer.h"
 "${ProjDirPath}/src/pin_mux.c"
 "${ProjDirPath}/src/pin_mux.h"
 "${ProjDirPath}/src/clock_config.c"
