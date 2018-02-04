@@ -1,2 +1,3 @@
 * Rework to use 2 FTM2_CHx as drivers for L1_uP and L2_uP: Then I can use builtin PWM module to control brightness and let logic just modulate PWM duty cycle
 * Write own GPIO driver... PinWrite and PinRead slow due to port selection math: Replace PORT+PIN with absolute pin mask
+* In order to do LowPower(), we need to implement a RAM-based function that is capable of returning to FullSpeed(): Cannot execute from flash if busclk is less than 1MHz
