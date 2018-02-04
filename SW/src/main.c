@@ -3,6 +3,7 @@
 #include "pin_mux.h"
 #include "clock_config.h"
 #include "board.h"
+#include "leds.h"
 
 #ifdef DEBUG
 //TODO: Trim fat of debug console, else we currently over-shoot flash size by 50%
@@ -31,12 +32,15 @@ int main(void)
 	FTM_Init(BOARD_PERIODIC_FTM, &ftm_config);
 	FTM_SetTimerPeriod(BOARD_PERIODIC_FTM, TICKS_PER_10MS);
 
+	Leds_Init();
+
 	FTM_StartTimer(BOARD_PERIODIC_FTM, kFTM_SystemClock);
 	while (1) {
 		status = FTM_GetStatusFlags(BOARD_PERIODIC_FTM);
 		if (status & kFTM_TimeOverflowFlag) {
 			FTM_ClearStatusFlags(BOARD_PERIODIC_FTM, kFTM_TimeOverflowFlag);
 
+			Leds_Think();
 		}
 	}
 }
