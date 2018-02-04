@@ -197,6 +197,8 @@ add_executable(Lasersword.elf
 "${ProjDirPath}/sdk/devices/MKE04Z4/drivers/fsl_uart.c"
 "${ProjDirPath}/sdk/devices/MKE04Z4/drivers/fsl_gpio.h"
 "${ProjDirPath}/sdk/devices/MKE04Z4/drivers/fsl_gpio.c"
+"${ProjDirPath}/sdk/devices/MKE04Z4/drivers/fsl_ftm.h"
+"${ProjDirPath}/sdk/devices/MKE04Z4/drivers/fsl_ftm.c"
 "${ProjDirPath}/sdk/devices/MKE04Z4/utilities/io/fsl_io.c"
 "${ProjDirPath}/sdk/devices/MKE04Z4/utilities/io/fsl_io.h"
 "${ProjDirPath}/sdk/devices/MKE04Z4/utilities/log/fsl_log.c"
