@@ -1,3 +1,9 @@
 * Rework to use 2 FTM2_CHx as drivers for L1_uP and L2_uP: Then I can use builtin PWM module to control brightness and let logic just modulate PWM duty cycle
 * Write own GPIO driver... PinWrite and PinRead slow due to port selection math: Replace PORT+PIN with absolute pin mask
 * In order to do LowPower(), we need to implement a RAM-based function that is capable of returning to FullSpeed(): Cannot execute from flash if busclk is less than 1MHz
+* rework uarttx to be MISO for sd card, one of PTC spares for CS
+* Enter LowPower() when color = off? Need to kill IRQs
+* Use WFI instruction to go into stop mode between IRQs/loops? Can any (at all?) GPIO wake from WAIT/STOP?
+* Split SW1 into SW1_IN and SW1_OUT (if there's any GPIO left...)
+* Elongate board: There should be some room (how much?) on left and right to accomodate full size headers
+
