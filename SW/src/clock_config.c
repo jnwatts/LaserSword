@@ -55,6 +55,7 @@ void BOARD_InitBootClocks(void)
 /* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
 !!Configuration
 name: BOARD_FullSpeed
+called_from_default_init: true
 outputs:
 - {id: Bus_clock.outFreq, value: 20.97152 MHz}
 - {id: Core_clock.outFreq, value: 41.94304 MHz}
@@ -66,7 +67,8 @@ outputs:
 - {id: Timer_clock.outFreq, value: 41.94304 MHz}
 settings:
 - {id: ICS.BDIV.scale, value: '1', locked: true}
-- {id: SIM.DIV2.scale, value: '2'}
+- {id: SIM.DIV1.scale, value: '1', locked: true}
+- {id: SIM.DIV2.scale, value: '2', locked: true}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
 
@@ -118,7 +120,6 @@ void BOARD_FullSpeed(void)
 /* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
 !!Configuration
 name: BOARD_LowPower
-called_from_default_init: true
 outputs:
 - {id: Bus_clock.outFreq, value: 8.192 kHz}
 - {id: Core_clock.outFreq, value: 8.192 kHz}
@@ -131,6 +132,7 @@ settings:
 - {id: ICSMode, value: FBILP}
 - {id: ICS.BDIV.scale, value: '4', locked: true}
 - {id: ICS.CLKS.sel, value: ICS.IRCLK}
+- {id: SIM.DIV1.scale, value: '1', locked: true}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
 
