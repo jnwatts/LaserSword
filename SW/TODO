@@ -1,1 +1,2 @@
 * Rework to use 2 FTM2_CHx as drivers for L1_uP and L2_uP: Then I can use builtin PWM module to control brightness and let logic just modulate PWM duty cycle
+* Write own GPIO driver... PinWrite and PinRead slow due to port selection math: Replace PORT+PIN with absolute pin mask
